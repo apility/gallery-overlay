@@ -41,10 +41,6 @@
   </div>
 @endforeach
 
-@section('playButton')
- <a onclick="GoBack('toggle')">Play<i class="fas fa-play"></i></a>
-@endsection
-
 <script defer>
 function GoToView(view) {
   $("#playbutton").modal('hide');
