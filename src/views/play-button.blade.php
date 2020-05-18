@@ -1,3 +1,7 @@
 <a onclick="GoBack('toggle')">
-  {{ $slot }}
+  @if ($slot == '')
+    <i class="fas fa-play"></i>
+  @else
+    {{ $slot }}
+  @endif
 </a>
