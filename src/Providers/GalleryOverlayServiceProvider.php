@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Apility\GalleryOverlay\Components\GalleryOverlay;
 use Apility\GalleryOverlay\Components\GalleryOverlayGlobal;
+use Apility\GalleryOverlay\Components\PlayButton;
 
 class GalleryOverlayServiceProvider extends ServiceProvider
 {
@@ -25,5 +26,6 @@ class GalleryOverlayServiceProvider extends ServiceProvider
 
     Blade::component(GalleryOverlay::class);
     Blade::component(GalleryOverlayGlobal::class);
+    Blade::component(PlayButton::class);
   }
 }

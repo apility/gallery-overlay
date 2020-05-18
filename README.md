@@ -66,7 +66,7 @@ example:
 ```php
 <x-play-button>
   Play<i class="fas fa-play"></i>
-<x-play-button />
+</x-play-button>
 ```
 
 ## Contributing
