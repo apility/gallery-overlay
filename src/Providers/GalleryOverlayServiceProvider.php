@@ -17,7 +17,7 @@ class GalleryOverlayServiceProvider extends ServiceProvider
 
   public function boot() {
     $this->publishes([
-      __DIR__.'/../scss' => public_path('../resources/sass/vendor/galleryOverlay.scss')
+      __DIR__.'/../scss' => public_path('../resources/sass/vendor')
     ]);
   }
 
