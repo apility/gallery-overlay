@@ -17,26 +17,41 @@ composer require apility/gallery-overlay
 ### owl carousel
 
 ```bash
-yarn add apility/apility/OwlCarousel2
+yarn add apility/OwlCarousel2
+```
+
+## Setup
+
+Add .scss files to your project:
+By default this will be published to your /resources/scss/vendor/ folder.
+This file can be tweaked to your project and will not be overriden unless you publish again with a force flag.
+
+```bash
+php artisan vendor:publish
 ```
 
 ## Imports
 
 Javascript:
+Add import to owl carousel to your app.js file
 
 ```javascript
 import 'owl.carousel'
 ```
 
 Sass:
-Copy over galleryOverlay.scss and import it, or vendor:publish and import that way
+Add import for owl carousel css and published galleryOverlay scss
 ```scss
 @import "~owl.carousel/dist/assets/owl.carousel.css";
-@import "./vendor/galleryOverlay.scss";
+@import "/../vendor/galleryOverlay.scss";
 ```
 
-On your template view <x-gallery-overlay />
+## Usage
 
+The blade components:
+On your template view add <x-gallery-overlay />, this should be added as high up in the DOM tree as possible for the overlay to work properly.
+
+example:
 ```php
 @extends('layouts.base')
 @section('body')
@@ -46,11 +61,12 @@ On your template view <x-gallery-overlay />
 ```
 
 Finally add in the play button where you want it to show up:
-
+You can replace the content inside to customize it's look.
+example:
 ```php
-@hasSection('playButton')
-  @yield('playButton')
-@endif
+<x-play-button>
+  Play<i class="fas fa-play"></i>
+<x-play-button />
 ```
 
 ## Contributing
