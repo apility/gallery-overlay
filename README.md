@@ -48,7 +48,8 @@ Add import for owl carousel css and published galleryOverlay scss
 
 ## Usage
 
-The blade components:
+### Blade components
+
 On your template view add <x-gallery-overlay />, this should be added as high up in the DOM tree as possible for the overlay to work properly.
 
 example:
@@ -62,11 +63,32 @@ example:
 
 Finally add in the play button where you want it to show up:
 You can replace the content inside to customize it's look.
+
 example:
 ```php
 <x-play-button>
   Play<i class="fas fa-play"></i>
 </x-play-button>
+```
+
+### Mounting owl carousel
+
+Mount and customize owl carousel in your main js file
+
+```javascript
+  $(".GalleryOverlay__container > .owl-carousel").owlCarousel({
+    items: 1,
+    loop: $(".fullwidth-banner .item").length > 1,
+    margin: 0,
+    nav: false,
+    mouseDrag: true,
+    touchDrag: true,
+    dots: true,
+    navText: [
+      '<i class="fal fa-chevron-left"></i>',
+      '<i class="fal fa-chevron-right"></i>'
+    ]
+  });
 ```
 
 ## Contributing
