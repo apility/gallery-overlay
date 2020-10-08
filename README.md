@@ -40,10 +40,11 @@ import 'owl.carousel'
 ```
 
 Sass:
-Add import for owl carousel css and published galleryOverlay scss
+Add import for owl carousel css and published galleryOverlay scss.
+Your import paths may vary. Look for the published galleryOverlay.scss file created in the setup step
 ```scss
 @import "~owl.carousel/dist/assets/owl.carousel.css";
-@import "/../vendor/galleryOverlay.scss";
+@import "../sass/vendor/galleryOverlay.scss";
 ```
 
 ## Usage
